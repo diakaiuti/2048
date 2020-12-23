@@ -5,8 +5,7 @@ from GameFieldDesign import GREEN, PINK
 from MainLogic import *
 
 BLOCKS = 4
-
-mas = [BLOCKS][BLOCKS]
+mas = crate_game_array(BLOCKS)
 
 SIZE_BLOCK = 110
 MARGIN = 10
@@ -14,8 +13,6 @@ WIDTH = BLOCKS * SIZE_BLOCK + (BLOCKS + 1) * MARGIN
 HEIGHT = WIDTH + 110
 TITLE_REC = pygame.Rect(0, 0, WIDTH, 110)
 
-mas[1][2] = 2
-mas[3][0] = 4
 print(get_empty_list(mas))
 pretty_print(mas)
 

@@ -2,16 +2,13 @@ import random
 
 
 def pretty_print(mas):
-    print('-' * 10)
+    print('--' * len(mas))
     for row in mas:
         print(*row)
-    print('-' * 10)
+    print('--' * len(mas))
 
 
 def get_number_from_index(i, j):
-    print("i = ", i)
-    print("j = ", j)
-    print("= ", i * 4 + j + 1)
     return i * 4 + j + 1
 
 
@@ -26,6 +23,10 @@ def insert_2_or_4():
         return 2
     else:
         return 4
+
+
+def crate_game_array(size):
+    return [[0 for x in range(size)] for y in range(size)]
 
 
 def get_empty_list(mas):
